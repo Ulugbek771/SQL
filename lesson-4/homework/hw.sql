@@ -110,5 +110,13 @@ WHERE Email LIKE '%@gmail.com';
   SELECT *
 FROM Mijozlar
 WHERE Email LIKE '%@gmail.com';
-27.
+27.Write a query that filters the Orders table for orders placed in the last 180 days using BETWEEN and LATEST_DATE in the table. (Search how to get the current date and latest date)
 
+-- 1. Oxirgi buyurtma sanasini olish
+DECLARE @LatestDate DATE;
+SELECT @LatestDate = MAX(OrderDate) FROM Orders;
+
+-- 2. So'nggi 180 kun ichidagi buyurtmalarni olish
+SELECT *
+FROM Orders
+WHERE OrderDate BETWEEN DATEADD(DAY, -180, @LatestDate) AND @LatestDate;
