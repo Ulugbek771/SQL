@@ -11,3 +11,8 @@ from Employees;
   SELECT COUNT(DISTINCT Category) AS UniqueCategoryCount
 FROM Products;
 5.Write a query to find the total sales amount for the product with id 7 in the Sales table.
+  SELECT SUM(miqdor) AS umumiy_sotilgan
+FROM Sotish
+WHERE mahsulot_id = 7;
+6.
+  
