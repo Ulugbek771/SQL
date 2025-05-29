@@ -80,7 +80,7 @@ where E.Salary > 50000;
 from Employees E
 inner join Departments D on E.DepartmentID = D.DepartmentID
 WHERE 
-    d.DepartmentName = 'Human Resources';
+    D.DepartmentName = 'Human Resources';
        
         
   
